@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Slab:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.font-lob {
+  font-family: "Lobster", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.font-rob {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.container {
+  height: 300px;
+  width: 500px;
+  background-image: url("https://picsum.photos/600");
+  background-size: cover;
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.inner {
+  height: 100%;
+  width: 50%;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.inner h1 {
+  font-size: 72px;
+  line-height: 80px;
+}
+
+.inner p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+.text-mask {
+  color: rgba(0, 255, 255, 0);
+  background: url("https://picsum.photos/600") no-repeat center;
+  background-clip: text;
+}
+.bg-scale {
+  background-size: 100%;
+  transition: all 0.5s ease;
+}
+.bg-scale:hover {
+  background-size: 110%;
+}
+.one {
+  background-color: #01204e;
+  display:none;
+}
+.two {
+  background-color: #f6dcac;
+}
+.three {
+  background-color: #028391;
+}
+.four {
+  background-color: #feae6f;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 200%;
+  left: 0;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(140, 0, 255, 0.212),
+    rgba(5, 113, 201, 0.726)
+  );
+  transition: all 0.4s ease;
+}
+.container:hover .overlay {
+  top: 0;
+}
+.info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.5s ease;
+}
+.container:hover .info{
+  top:10%;
+  
+
+}
+.category {
+  font-size:1.2rem;
+  color:white;
+
+}
+.title{
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+  /* position:relative*/
+  z-index: 2;
+  display: inline-block;
+  color: white;
+} 
+
+.title::after{
+  position: absolute;
+  content: "";
+  height:4px;
+  width:30%;
+  background-color: gold;
+  bottom:-10px;
+  left:50%;
+  transform: translateX(-50%);
+  
+}
+/* .title{
+  font-size: 32px;
+  text-align: center;
+  padding-bottom: .4em;
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+}
+
+.title::after{
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 30%;
+  background-color: gold;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  
+} */
+.overlay-text{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ position: relative;
+ top:50%;
+ transform: translateY(-50%);
+ padding: 20px;
+ 
+}
+.overlay-text p{
+  font-size:1.1rem;
+  line-height: 1.4rem;
+  color:white;
+
+}
+.overlay-btn{
+  padding: 8px 16px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  color: rgb(112, 111, 107);
+  transition: all 0.4s ease;
+}
+.overlay-btn:hover{
+  cursor: pointer;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(140, 0, 255, 0.212),
+    rgba(5, 113, 201, 0.726)
+  );
+  color: white;
+}
